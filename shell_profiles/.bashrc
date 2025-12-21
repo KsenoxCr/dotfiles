@@ -13,7 +13,9 @@ if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-env
 fi
 
-# Exporting Env Vars 
+# Exporting Env Vars
+
+# testing gh action
 
 cat "../.env" | while read line; do
     export "$line"
