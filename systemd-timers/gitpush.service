@@ -1,0 +1,11 @@
+[Unit]
+Description=Push local git repositories to remote
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "%h/scripting/bash/gitpush.sh"
+
+[Install]
+WantedBy=default.target
