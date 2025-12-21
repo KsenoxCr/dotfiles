@@ -15,7 +15,7 @@ fi
 
 # Exporting Env Vars
 
-# testing gh action
+# testing gh action 2
 
 cat "../.env" | while read line; do
     export "$line"
