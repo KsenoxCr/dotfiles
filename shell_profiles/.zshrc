@@ -4,8 +4,14 @@ fi
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/clean-detailed.json)"
 
-# Fast fs traversal
+# Fast Navigation
+
 eval "$(zoxide init zsh)"
+alias cd='echo "use zoxide!"'
+
+
+
+# SSH into keychain (for GH pushes)
 
 eval "$(keychain --eval --quiet --agents ssh id_ed25519)"
 
@@ -150,8 +156,7 @@ alias code="claude"
 alias codes="claude --model sonnet"
 alias codeh="claude --model haiku"
 alias clau="claude-desktop"
-alias nvc='nvim +"terminal bash -lc claude" +"vsplit | terminal bash -lc codex"'
-
+alias nvc='nvim +"terminal bash -ic claude" +"vsplit | terminal bash -c codex"'
 
 alias tm="tmux"
 alias tn="tmux new -A -s"
@@ -159,10 +164,6 @@ alias tl="tmux list-sessions"
 # alias tr="tmux kill-session"
 # alias td="tmux kill-session"
 alias mx="tmuxinator"
-
-## Quick Navigation
-
-alias cd='echo "use zoxide!"'
 
 ## APT
 
@@ -190,3 +191,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 . "$HOME/.local/bin/env"
+
+
+## ZLE Widgets
+
+bindkey -r '^[c'
+bindkey '^[D' fzf-cd-widget
