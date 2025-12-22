@@ -6,7 +6,7 @@
 output HDMI-A-1 mode 1920x1080@60Hz
 output DP-1 mode 1920x1080@164.920Hz
 # position -1920 0
-output * bg ~/wallpapers/space.jpg fill
+output * bg ~/images/wallpapers/space.jpg fill
 
 ### Variables
 set $mod Mod4
@@ -15,7 +15,7 @@ set $fileManager dolphin
 set $pwdMngr Bitwarden
 set $browser chromium
 set $claude claude-desktop
-set $screenShot grim -g "$(slurp)" - | tee ~/screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png | wl-copy --type image/png
+set $screenShot grim -g "$(slurp)" - | tee ~/images/screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png | wl-copy --type image/png
 set $OCRScreenShot grim -g "$(slurp)" - | tesseract stdin stdout -l eng --psm 6 | wl-copy
 set $mainMonitorSS grim -o DP-1 - | wl-copy
 set $lockScreen swaylock -i ~/wallpapers/space.jpg
