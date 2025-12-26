@@ -1,7 +1,6 @@
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec sway
 fi
-
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/clean-detailed.json)"
 
 # Fast Navigation
@@ -196,4 +195,4 @@ export NVM_DIR="$HOME/.nvm"
 ## ZLE Widgets
 
 bindkey -r '^[c'
-bindkey '^[D' fzf-cd-widget
+# bindkey '^[C' fzf-cd-widget
