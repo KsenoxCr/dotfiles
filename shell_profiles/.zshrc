@@ -1,3 +1,5 @@
+bindkey -v
+
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec sway
 fi
@@ -195,4 +197,5 @@ export NVM_DIR="$HOME/.nvm"
 ## ZLE Widgets
 
 bindkey -r '^[c'
-# bindkey '^[C' fzf-cd-widget
+bindkey '^f' fzf-cd-widget
+bindkey -r '^[d'
