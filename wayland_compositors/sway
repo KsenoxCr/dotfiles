@@ -18,7 +18,7 @@ set $claude claude-desktop
 set $screenShot grim -g "$(slurp)" - | tee ~/images/screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png | wl-copy --type image/png
 set $OCRScreenShot grim -g "$(slurp)" - | tesseract stdin stdout -l eng --psm 6 | wl-copy
 set $mainMonitorSS grim -o DP-1 - | wl-copy
-set $lockScreen swaylock -i ~/wallpapers/space.jpg
+set $lockScreen swaylock -i ~/images/wallpapers/space.jpg
 set $menu rofi -show drun -theme Indego
 set $prompts rofi -modi "clip:~/scripting/bash/file2clip.sh" -show clip -theme Indego
 set $resmon kitty btop
