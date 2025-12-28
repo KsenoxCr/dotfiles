@@ -13,7 +13,13 @@ set $mod Mod4
 set $terminal kitty
 set $fileManager dolphin
 set $pwdMngr Bitwarden
-set $browser chromium
+set $browser systemd-run --user --scope -p MemoryMax=6G -p MemorySwapMax=1G chromium \
+  --process-per-site \
+  --js-flags="--max-old-space-size=2048" \
+  --disable-background-timer-throttling \
+  --disable-backgrounding-occluded-windows \
+  --disable-renderer-backgrounding \
+  --enable-features=MemoryPressureEvent
 set $claude claude-desktop
 set $screenShot grim -g "$(slurp)" - | tee ~/images/screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png | wl-copy --type image/png
 set $OCRScreenShot grim -g "$(slurp)" - | tesseract stdin stdout -l eng --psm 6 | wl-copy
