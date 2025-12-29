@@ -3,6 +3,7 @@ bindkey -v
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec sway
 fi
+
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/clean-detailed.json)"
 
 # Fast Navigation
@@ -165,6 +166,10 @@ alias tl="tmux list-sessions"
 # alias tr="tmux kill-session"
 # alias td="tmux kill-session"
 alias mx="tmuxinator"
+
+## Docker
+
+alias dc="docker compose"
 
 ## APT
 
