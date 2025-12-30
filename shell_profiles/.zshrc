@@ -143,7 +143,7 @@ alias lg=lazygit
 alias swrl="swaymsg reload"
 alias autopush="~/scripting/bash/gitpush.sh"
 alias gn="~/scripting/bash/nightly_backup.sh"
-alias rlnm="sudo systemctl restart NetworkManager && sleep 3 && nmcli"
+alias rlnm="sudo systemctl restart NetworkManager && sleep 5 && nmcli"
 alias rlsh=". ~/.zshrc"
 alias imv=imv-wayland
 
