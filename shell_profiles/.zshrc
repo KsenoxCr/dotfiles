@@ -201,6 +201,6 @@ export NVM_DIR="$HOME/.nvm"
 
 ## ZLE Widgets
 
-bindkey -r '^[c'
+bindkey -r '^[C'
 bindkey '^f' fzf-cd-widget
 bindkey -r '^[d'
