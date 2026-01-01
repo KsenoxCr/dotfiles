@@ -137,6 +137,7 @@ setopt NO_BEEP
 ## Aliases
 
 alias nv=nvim
+alias nvf=nvim -c "Fern ."
 alias th=trash
 alias fd=fdfind
 alias lg=lazygit
