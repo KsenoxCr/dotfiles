@@ -21,7 +21,7 @@ set $browser systemd-run --user --scope -p MemoryMax=6G -p MemorySwapMax=1G chro
   --disable-backgrounding-occluded-windows \
   --disable-renderer-backgrounding \
   --enable-features=MemoryPressureEvent
-set $n8n firefox https://n8n.thesensed.com
+set $librewolf flatpak run io.gitlab.librewolf-community https://n8n.thesensed.com
 set $claude claude-desktop
 set $screenShot grim -g "$(slurp)" - | tee ~/images/screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png | wl-copy --type image/png
 set $OCRScreenShot grim -g "$(slurp)" - | tesseract stdin stdout -l eng --psm 6 | wl-copy
@@ -226,7 +226,6 @@ bindsym $mod+Ctrl+Shift+j resize grow height 20px
 
 # Applications
 bindsym Shift+Ctrl+b exec $browser
-bindsym Shift+Ctrl+z exec $n8n
 
 # Prompt picker
 bindsym Shift+Ctrl+f exec $promptPicker
