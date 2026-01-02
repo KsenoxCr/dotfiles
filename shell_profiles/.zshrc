@@ -11,7 +11,7 @@ eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/clean-detailed.json)"
 eval "$(zoxide init zsh)"
 alias cd='echo "use zoxide!"'
 
-
+#
 
 # SSH into keychain (for GH pushes)
 
