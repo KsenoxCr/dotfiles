@@ -175,7 +175,7 @@ alias dc="docker compose"
 ## APT
 
 alias apti='sudo apt install'
-alias aptr='sudo apt remove'
+alias aptrm='sudo apt remove'
 alias aptup='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
 
 ## Task management
